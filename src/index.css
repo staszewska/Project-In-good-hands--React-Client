@@ -2,10 +2,7 @@
 @import 'normalize.css';
 
 .navbar {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  flex-direction: row;
+  padding: 10px
   
 }
 
