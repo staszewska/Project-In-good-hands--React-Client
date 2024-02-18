@@ -1,5 +1,6 @@
 import { ReactComponent as Decoration } from "../assets/Decoration.svg";
 import heroImage from "../assets/Home-Hero-Image.jpg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -11,8 +12,8 @@ const Header = () => {
         <p>Zacznij pomagać!</p>
         <p>Oddaj niechciane rzeczy w zaufane ręce</p>
         <Decoration />
-        <button>ODDAJ RZECZY</button>
-        <button>ZORGANIZUJ ZBIÓRKĘ</button>
+        <Link to="donate">ODDAJ RZECZY</Link>
+        <Link to="organize">ZORGANIZUJ ZBIÓRKĘ</Link>
       </div>
     </div>
   );
