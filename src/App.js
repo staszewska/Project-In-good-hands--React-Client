@@ -7,6 +7,13 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" exact element={<Home />} />
+
+        {/* <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/us" element={<UsPage />} />
+        <Route path="/foundation" element={<FoundationPage />} />
+        <Route path="/contact" element={<ContactPage />} /> */}
       </Routes>
     </BrowserRouter>
   );
