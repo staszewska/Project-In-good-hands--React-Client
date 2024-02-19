@@ -77,19 +77,42 @@ body {
 }
 
 .ThreeColumns {
-  border: 1px solid red;
   display: flex;
   flex-direction: row;
+  background-color: #ffd52f;
 
   .ThreeColumns__ColumnContainer {
-    border: 5px solid green;
     flex-basis: 33%;
+    text-align: center;
   }
 
   .Column {
-    .Column__Heading {
-      color: blue;
-      font-size: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    &__Heading {
+      font-size: 0.7em;
+      color: $main-text-color;
+      margin-bottom: 20px;
+    }
+
+    &__Number {
+      font-size: 3.5em;
+      color: $number-color;
+      font-weight: 300;
+      margin-bottom: 20px;
+      margin-top: 30px
+    }
+
+    &__Para {
+      font-size: 0.7em;
+      color: $main-text-color;
+      margin-bottom: 20px;
+      width: 334px
     }
   }
 }
