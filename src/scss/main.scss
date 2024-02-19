@@ -8,3 +8,88 @@
 body {
   font-family: $font-base;
 }
+
+.navbar {
+  padding: 10px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.links {
+  font-size: 0.9em;
+  padding-right: 9px
+}
+
+.navbar .login a {
+  color: $login-color;
+}
+
+.navbar .links a {
+  color: $main-text-color;
+}
+
+.login,
+.links {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+
+  &.login {
+    font-size: 0.7em;
+    padding: 10px;
+    gap: 20px;
+  }
+}
+
+.header {
+  display: flex;
+
+  .LeftHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 50%;
+    font-size: 1.3em;
+    gap: 15px;
+    color: $main-text-color;
+  }
+
+  .Header__Links {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.MainButton {
+  width: 150px;
+  height: 70px;
+  border: 0.75px solid $main-text-color;
+  font-family: $font-base;
+  color: $main-text-color;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ThreeColumns {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+
+  .ThreeColumns__ColumnContainer {
+    border: 5px solid green;
+    flex-basis: 33%;
+  }
+
+  .Column {
+    .Column__Heading {
+      color: blue;
+      font-size: 2rem;
+    }
+  }
+}
