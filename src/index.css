@@ -14,12 +14,33 @@
 }
 
 .header {
-  display: flex
+  display: flex;
 }
 
-.left-header {
+.LeftHeader {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-basis: 50%;
+}
+
+.ThreeColumns {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+}
+
+.ThreeColumns__ColumnContainer {
+  border: 5px solid green;
+  flex-basis: 33%;
+}
+
+.Column {
+
+}
+
+.Column__Heading {
+  color: blue;
+  font-size: 2rem;
 }
