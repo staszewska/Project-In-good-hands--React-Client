@@ -12,8 +12,8 @@ const Header = () => {
         <p>Zacznij pomagać!</p>
         <p>Oddaj niechciane rzeczy w zaufane ręce</p>
         <Decoration />
-        <Link to="donate">ODDAJ RZECZY</Link>
-        <Link to="organize">ZORGANIZUJ ZBIÓRKĘ</Link>
+        <Link to="login">ODDAJ RZECZY</Link>
+        <Link to="login">ZORGANIZUJ ZBIÓRKĘ</Link>
       </div>
     </div>
   );
