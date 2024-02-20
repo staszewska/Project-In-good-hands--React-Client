@@ -74,6 +74,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1px;
+  font-size: 1rem;
 }
 
 .ThreeColumns {
@@ -118,9 +120,6 @@ body {
 }
 
 .FourStepsContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 10px;
 
   &__Header {
@@ -134,5 +133,24 @@ body {
     font-weight: 300;
     gap: 10px
   }
+
+  &__Content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    background-color: #F0F1F1;
+    font-size: 0.7em;
+    text-align: center;
+    padding: 20px;
+    color: $main-text-color;
+  }
+
+}
+
+.FourStepsContainer__Button {
+    display: flex;
+    justify-content: center;
+    padding-top:20px
 }
 
