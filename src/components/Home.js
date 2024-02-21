@@ -4,6 +4,7 @@ import ThreeColumns from "./ThreeColumns";
 import FourSteps from "./FourSteps";
 import { Element } from "react-scroll";
 import AboutUs from "./AboutUs";
+import Help from "./Help";
 
 const Home = () => {
   return (
@@ -21,6 +22,8 @@ const Home = () => {
       <Element name="us">
         <AboutUs />
       </Element>
+
+      <Help />
     </div>
   );
 };
