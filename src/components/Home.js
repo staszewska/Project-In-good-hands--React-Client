@@ -3,6 +3,7 @@ import Header from "./Header";
 import ThreeColumns from "./ThreeColumns";
 import FourSteps from "./FourSteps";
 import { Element } from "react-scroll";
+import AboutUs from "./AboutUs";
 
 const Home = () => {
   return (
@@ -16,6 +17,8 @@ const Home = () => {
       <Element name="o-co-chodzi">
         <FourSteps />
       </Element>
+
+      <AboutUs />
     </div>
   );
 };
