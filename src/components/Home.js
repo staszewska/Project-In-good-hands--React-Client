@@ -18,7 +18,9 @@ const Home = () => {
         <FourSteps />
       </Element>
 
-      <AboutUs />
+      <Element name="us">
+        <AboutUs />
+      </Element>
     </div>
   );
 };

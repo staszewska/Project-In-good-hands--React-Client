@@ -13,7 +13,9 @@ const NavBar = () => {
         <ReactScrollLink to="o-co-chodzi" smooth={true} duration={500}>
           O co chodzi?
         </ReactScrollLink>
-        <Link to="us">O nas</Link>
+        <ReactScrollLink to="us" smooth={true} duration={500}>
+          O nas
+        </ReactScrollLink>
         <Link to="foundation">Fundacja i organizacja</Link>
         <Link to="contact">Kontakt</Link>
       </div>
