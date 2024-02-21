@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Link as ReactScrollLink } from "react-scroll";
 
 const NavBar = () => {
   return (
@@ -9,7 +10,9 @@ const NavBar = () => {
       </div>
       <div className="links">
         <Link to="/">Start</Link>
-        <Link to="about">O co chodzi?</Link>
+        <ReactScrollLink to="o-co-chodzi" smooth={true} duration={500}>
+          O co chodzi?
+        </ReactScrollLink>
         <Link to="us">O nas</Link>
         <Link to="foundation">Fundacja i organizacja</Link>
         <Link to="contact">Kontakt</Link>
