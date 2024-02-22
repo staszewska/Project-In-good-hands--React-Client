@@ -44,7 +44,7 @@ const Help = () => {
     things2: "Sit, officia, pariatur",
     name3: 'Zbiórka "Lorem Ipsum3"',
     para3: "Occaecat laboris proident duis dolor magna culpa officia in ea.",
-    thing3s: "Sit, officia, pariatur",
+    things3: "Sit, officia, pariatur",
   };
 
   const [selectedObj, setSelectedObj] = useState(obj1);

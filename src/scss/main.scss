@@ -201,16 +201,49 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  color: $main-text-color;
+
   }
 
   &__Description {
     text-align: center;
     width: 430px;
+    line-height: 1.5;
   }
 
   &__Content {
-    border: 2px solid pink;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
   }
+
+  &__ContentText {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.5;
+    padding: 30px;
+    border-bottom: 1px solid black;
+    gap: 200px
+  }
+
+  &__TextContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__TextDetails {
+    font-size: 10px;
+  }
+}
+
+.HelpForm__TextContainer p:last-child {
+  font-size: 10px;
+}
+
+.HelpForm__TextContainer p:first-child,
+.HelpForm__TextContainer p:last-child {
+  flex-basis: 80%;
 }
 
 

@@ -18,30 +18,30 @@ const HelpForm = ({ data }) => {
       <p className="HelpForm__Description">{description}</p>
 
       <div className="HelpForm__Content">
-        <div>
-          <div>
+        <div className="HelpForm__ContentText">
+          <div className="HelpForm__TextContainer">
             <p>{name1}</p>
             <p>{para}</p>
           </div>
 
-          <p>{things}</p>
+          <p className="HelpForm__TextDetails">{things}</p>
         </div>
 
-        <div>
-          <div>
+        <div className="HelpForm__ContentText">
+          <div className="HelpForm__TextContainer">
             <p>{name2}</p>
             <p>{para2}</p>
           </div>
-          <p>{things2}</p>
+          <p className="HelpForm__TextDetails">{things2}</p>
         </div>
-        <div>
-          <div>
+        <div className="HelpForm__ContentText">
+          <div className="HelpForm__TextContainer">
             <p>{name3}</p>
             <p>{para3}</p>
           </div>
 
           <div>
-            <p>{things3}</p>
+            <p className="HelpForm__TextDetails">{things3}</p>
           </div>
         </div>
       </div>
