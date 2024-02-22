@@ -175,3 +175,42 @@ body {
   }
 }
 
+.HelpForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 30px;
+  color: $main-text-color;
+
+  .HelpForm__Button {
+    border: none;
+    font-size: 1em;
+    background: white;
+    padding: 30px;
+    font-family: $font-base;
+  }
+}
+
+.HelpForm {
+
+  &__Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  }
+
+  &__Description {
+    text-align: center;
+    width: 430px;
+  }
+
+  &__Content {
+    border: 2px solid pink;
+  }
+}
+
+
