@@ -5,6 +5,7 @@ import FourSteps from "./FourSteps";
 import { Element } from "react-scroll";
 import AboutUs from "./AboutUs";
 import Help from "./Help";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -24,6 +25,8 @@ const Home = () => {
       </Element>
 
       <Help />
+
+      <Footer />
     </div>
   );
 };

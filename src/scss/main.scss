@@ -247,3 +247,37 @@ body {
 }
 
 
+.Footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 0 30px;
+  // background-image: url("../assets/Background-Contact-Form.jpg");
+  // height: 1000px;
+  // opacity: 0.5;
+  position: relative;
+
+
+    &__Form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    font-size: 1.3em;
+    gap: 15px;
+    color: #3C3C3C;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.BackgroundOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/Background-Contact-Form.jpg') center/cover;
+  opacity: 0.5; /* Adjust the opacity as needed */
+}
+
+
