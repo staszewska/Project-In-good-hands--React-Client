@@ -8,7 +8,7 @@ const Help = () => {
       "W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy.",
     name1: 'Fundacja "Dbam o zdrowie"',
     para: "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej",
-    things: "ubrania, jedzenie, meble, sprzęt AGD, zabawki",
+    things: "ubrania, jedzenie, meble, zabawki",
     name2: 'Fundacja "Dla dzieci"',
     para2: "Cel i misja: Pomoc dzieciom z ubogich rodzin.",
     things2: "ubrania, meble, zabawki",
@@ -20,7 +20,7 @@ const Help = () => {
 
   const obj2 = {
     description:
-      "Officia excepteur ut velit velit excepteur amet officia occaecat veniam magna eu ad laborum. Enim deserunt ad aliqua occaecat in cupidatat pariatur Lorem consectetur nisi esse do. Ad est aliqua anim eiusmod dolore ipsum veniam. Officia proident amet id non elit. Consequat id quis cillum eiusmod laboris est mollit enim duis cillum dolor labore nostrud anim. Consectetur mollit ipsum aliquip fugiat cupidatat culpa.",
+      "Officia excepteur ut velit velit excepteur amet officia occaecat veniam magna eu ad laborum. ",
     name1: 'Organizacja "Lorem Ipsum1"',
     para: "Aliquip occaecat do eu qui officia esse magna laboris incididunt. Quis reprehenderit fugiat reprehenderit cillum do pariatur ex. Incididunt adipisicing aute dolore adipisicing ipsum excepteur velit cupidatat culpa. Magna cupidatat sint qui reprehenderit veniam mollit exercitation magna elit veniam do labore.",
     things: "Sit, officia, pariatur",
