@@ -247,7 +247,7 @@ body {
 }
 
 
-.Footer {
+.Contact {
   display: flex;
   justify-content: flex-end;
   // background-image: url("../assets/Background-Contact-Form.jpg");
@@ -324,22 +324,22 @@ body {
   margin-bottom: 5px;
 }
 
-.Footer__FormInput {
+.Contact__FormInput {
   display: flex;
   justify-content: space-between;
 }
 
-.Footer__FormInput > div {
+.Contact__FormInput > div {
   margin-right: 10px;
 }
 
-.Footer__FormTextarea label {
+.Contact__FormTextarea label {
   display: block;
   margin-bottom: 5px;
 }
 
-.Footer__FormInput input,
-.Footer__FormTextarea textarea {
+.Contact__FormInput input,
+.Contact__FormTextarea textarea {
   border: none;
   border-bottom: 1px solid black;
   background: transparent;

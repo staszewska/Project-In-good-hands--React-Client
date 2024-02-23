@@ -1,15 +1,15 @@
 import { ReactComponent as Decoration } from "../assets/Decoration.svg";
 
-const Footer = () => {
+const Contact = () => {
   return (
     <>
-      <div className="Footer">
+      <div className="Contact">
         <div className="BackgroundOverlay"></div>
-        <div className="Footer__Form">
+        <div className="Contact__Form">
           <p>Skontaktuj się z nami</p>
           <Decoration />
-          <form className="Footer__FormContent">
-            <div className="Footer__FormInput">
+          <form className="Contact__FormContent">
+            <div className="Contact__FormInput">
               <div className="FormInput__Row">
                 <label>Wpisz swoje imię</label>
                 <input type="text" value="Krzysztof"></input>{" "}
@@ -19,12 +19,12 @@ const Footer = () => {
                 <input type="email" value="abc@xyz.pl"></input>
               </div>
             </div>
-            <div className="Footer__FormTextarea">
+            <div className="Contact__FormTextarea">
               <label>Wpisz swoją wiadomość</label>
               <textarea></textarea>
             </div>
-            <div className="Footer__SendButtoContainer">
-              <a className="Footer__SendButton" href="/">
+            <div className="Contact__SendButtoContainer">
+              <a className="Contact__SendButton" href="/">
                 WYŚlIJ
               </a>
             </div>
@@ -35,4 +35,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Contact;
