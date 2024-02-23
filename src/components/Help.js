@@ -22,7 +22,7 @@ const Help = () => {
     description:
       "Officia excepteur ut velit velit excepteur amet officia occaecat veniam magna eu ad laborum. ",
     name1: 'Organizacja "Lorem Ipsum1"',
-    para: "Aliquip occaecat do eu qui officia esse magna laboris incididunt. Quis reprehenderit fugiat reprehenderit cillum do pariatur ex. Incididunt adipisicing aute dolore adipisicing ipsum excepteur velit cupidatat culpa. Magna cupidatat sint qui reprehenderit veniam mollit exercitation magna elit veniam do labore.",
+    para: "Aliquip occaecat do eu qui officia esse magna laboris incididunt. Quis reprehenderit fugiat reprehenderit cillum do pariatur ex.",
     things: "Sit, officia, pariatur",
     name2: 'Organizacja "Lorem Ipsum2"',
     para2: "Esse ullamco ipsum officia esse.",

@@ -16,7 +16,9 @@ const NavBar = () => {
         <ReactScrollLink to="us" smooth={true} duration={500}>
           O nas
         </ReactScrollLink>
-        <Link to="foundation">Fundacja i organizacja</Link>
+        <ReactScrollLink to="help" smooth={true} duration={500}>
+          Fundacja i organizacja
+        </ReactScrollLink>
         <Link to="contact">Kontakt</Link>
       </div>
     </nav>

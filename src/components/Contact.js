@@ -1,4 +1,5 @@
 import { ReactComponent as Decoration } from "../assets/Decoration.svg";
+import Footer from "./Footer";
 
 const Contact = () => {
   return (
@@ -29,6 +30,8 @@ const Contact = () => {
               </a>
             </div>
           </form>
+
+          <Footer />
         </div>
       </div>
     </>

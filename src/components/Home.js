@@ -24,7 +24,9 @@ const Home = () => {
         <AboutUs />
       </Element>
 
-      <Help />
+      <Element name="help">
+        <Help />
+      </Element>
 
       <Contact />
     </div>
