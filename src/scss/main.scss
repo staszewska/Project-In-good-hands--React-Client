@@ -1,9 +1,9 @@
-@import 'reset-css';
-@import 'normalize.css';
-@import 'settings/fonts'; 
-@import 'settings/colors'; 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "reset-css";
+@import "normalize.css";
+@import "settings/fonts";
+@import "settings/colors";
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 body {
   font-family: $font-base;
@@ -19,7 +19,7 @@ body {
 
 .links {
   font-size: 0.9em;
-  padding-right: 9px
+  padding-right: 9px;
 }
 
 .navbar .login a {
@@ -89,12 +89,10 @@ body {
   }
 
   .Column {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 
     &__Heading {
       font-size: 0.7em;
@@ -107,14 +105,14 @@ body {
       color: $number-color;
       font-weight: 300;
       margin-bottom: 20px;
-      margin-top: 30px
+      margin-top: 30px;
     }
 
     &__Para {
       font-size: 0.7em;
       color: $main-text-color;
       margin-bottom: 20px;
-      width: 334px
+      width: 334px;
     }
   }
 }
@@ -131,7 +129,7 @@ body {
     padding: 30px;
     color: $main-text-color;
     font-weight: 300;
-    gap: 10px
+    gap: 10px;
   }
 
   &__Content {
@@ -139,19 +137,18 @@ body {
     justify-content: center;
     align-items: center;
     gap: 100px;
-    background-color: #F0F1F1;
+    background-color: #f0f1f1;
     font-size: 0.7em;
     text-align: center;
     padding: 20px;
     color: $main-text-color;
   }
-
 }
 
 .FourStepsContainer__Button {
-    display: flex;
-    justify-content: center;
-    padding-top:20px
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
 }
 
 .AboutUsContainer {
@@ -165,9 +162,8 @@ body {
     align-items: center;
     flex-direction: column;
     width: 50%;
-    background-color: #F0F1F1;
-    padding: 50px
-   
+    background-color: #f0f1f1;
+    padding: 50px;
   }
 
   .AboutUsImgContainer {
@@ -195,15 +191,13 @@ body {
 }
 
 .HelpForm {
-
   &__Container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  color: $main-text-color;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    color: $main-text-color;
   }
 
   &__Description {
@@ -225,7 +219,7 @@ body {
     line-height: 1.5;
     padding: 30px;
     border-bottom: 1px solid black;
-    gap: 200px
+    gap: 200px;
   }
 
   &__TextContainer {
@@ -247,74 +241,59 @@ body {
   flex-basis: 80%;
 }
 
-
 .Contact {
   display: flex;
   justify-content: flex-end;
-  // background-image: url("../assets/Background-Contact-Form.jpg");
-  // height: 1000px;
-  // opacity: 0.5;
   position: relative;
-  padding: 74px 73px 90px;
 
+  &__Background {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    opacity: 40%;
+  }
 
-    &__Form {
+  &__Form {
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 50px;
     font-size: 1.3em;
     gap: 15px;
-    color: #3C3C3C;
-    position: relative;
-    z-index: 1;
-    }
-
-    &__FormContent {
-    font-size: 10px;
-    font-weight: 600;
-    }
-
-    &__FormTextarea {
-      padding-top: 20px
-    }
-
-    &__SendButtoContainer {
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    &__SendButton {
-      
-      width: 65px;
-      height: 30px;
-      border: 0.75px solid #3C3C3C;
-      font-family: "Open Sans", sans-serif;
-      color: #3C3C3C;
-      text-align: center;
-      text-decoration: none;
-      padding: 1px;
-      font-size: 1em;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
+    color: #3c3c3c;
+    position: absolute;
+    top: 194px;
+    right: 227px;
   }
 
+  &__FormContent {
+    font-size: 10px;
+    font-weight: 600;
+  }
 
-.BackgroundOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('../assets/Background-Contact-Form.jpg');
-  opacity: 0.5; 
+  &__FormTextarea {
+    padding-top: 20px;
+  }
 
-  background-size: cover;
-  background-repeat: no-repeat;
-  
+  &__SendButtoContainer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__SendButton {
+    width: 65px;
+    height: 30px;
+    border: 0.75px solid #3c3c3c;
+    font-family: "Open Sans", sans-serif;
+    color: #3c3c3c;
+    text-align: center;
+    text-decoration: none;
+    padding: 1px;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .FormInput__Row {
@@ -345,7 +324,7 @@ body {
   border: none;
   border-bottom: 1px solid black;
   background: transparent;
-  color: #3C3C3C26
+  color: #3c3c3c26;
 }
 
 .Footer {
@@ -359,6 +338,6 @@ body {
     display: flex;
     position: absolute;
     top: -19px;
-    left: 640px
+    left: 640px;
   }
 }

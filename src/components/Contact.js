@@ -1,11 +1,16 @@
 import { ReactComponent as Decoration } from "../assets/Decoration.svg";
 import Footer from "./Footer";
+import background from "../assets/Background-Contact-Form.jpg";
 
 const Contact = () => {
   return (
     <>
       <div className="Contact">
-        <div className="BackgroundOverlay"></div>
+        <img
+          src={background}
+          className="Contact__Background"
+          alt="background"
+        />
         <div className="Contact__Form">
           <p>Skontaktuj się z nami</p>
           <Decoration />
@@ -30,9 +35,8 @@ const Contact = () => {
               </a>
             </div>
           </form>
-
-          <Footer />
         </div>
+        <Footer />
       </div>
     </>
   );
