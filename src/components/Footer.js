@@ -5,9 +5,6 @@ const Footer = () => {
   return (
     <>
       <div className="Footer">
-        <div className="FooterText">
-          <p>Copyright by Coders Lab</p>
-        </div>
         <div className="Footer__Icons">
           <a href="https://www.facebook.com" target="_blank">
             <img src={Facebook} alt="facebook-icon" />

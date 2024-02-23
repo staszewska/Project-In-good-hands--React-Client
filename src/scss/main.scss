@@ -314,6 +314,7 @@ body {
 
   background-size: cover;
   background-repeat: no-repeat;
+  
 }
 
 .FormInput__Row {
@@ -353,13 +354,11 @@ body {
   left: -343px;
   width: 100%;
   padding: 10px;
-  display: flex;
-  justify-content: space-between;
 
   &__Icons {
     display: flex;
     position: absolute;
-    top: 3px;
+    top: -19px;
     left: 640px
   }
 }
