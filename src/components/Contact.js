@@ -70,11 +70,23 @@ const Contact = () => {
     setFormData({ ...formData, message: event.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (validateForm()) {
       console.log("Form submitted successfully:", formData);
+
+      // FIXME:
+      const response = await fetch(
+        "https://fer-api.coderslab.pl/v1/portfolio/contact",
+        {
+          method: "POST",
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const responseText = await response.text();
+      console.log(JSON.parse(responseText));
     } else {
       console.log("Form submission failed. Please check the errors.");
     }
