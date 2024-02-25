@@ -74,61 +74,11 @@ const Contact = () => {
     e.preventDefault();
 
     if (validateForm()) {
-      // Perform your submit logic here
       console.log("Form submitted successfully:", formData);
     } else {
       console.log("Form submission failed. Please check the errors.");
     }
   };
-
-  // const [inputFields, setInputFields] = useState({
-  //   name: "",
-  //   email: "",
-  //   message: "",
-  // });
-
-  // const [errors, setErrors] = useState({});
-  // const [submitting, setSubmitting] = useState(false);
-
-  // const validateValues = (inputValue) => {
-  //   if (inputValue.message.length < 120) {
-  //     errors.message = "Message must be at least 120 characters long";
-  //   }
-
-  //   if (inputValue.message.length < 0) {
-  //     errors.message = "This field cannot be empty";
-  //   }
-
-  //   if (inputValue.name.length < 0) {
-  //     errors.name = "This field cannot be empty";
-  //   }
-
-  //   if (inputValue.email.length < 0) {
-  //     errors.email = "This field cannot be empty";
-  //   }
-
-  //   return errors;
-  // };
-
-  // const handleChange = (e) => {
-  //   setInputFields({ ...inputFields, [e.target.name]: e.target.value });
-  // };
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   setErrors(validateValues(inputFields));
-  //   setSubmitting(true);
-  // };
-
-  // const finishSubmit = () => {
-  //   console.log(inputFields);
-  // };
-
-  // useEffect(() => {
-  //   if (Object.keys(errors).length === 0 && submitting) {
-  //     finishSubmit();
-  //   }
-  // }, [errors]);
 
   return (
     <>
@@ -158,7 +108,6 @@ const Contact = () => {
                 <label htmlFor="email">Wpisz swój e-mail</label>
                 <input
                   type="text"
-                  // type="email"
                   id="email"
                   value={formData.email}
                   onChange={handleEmailChange}
