@@ -329,15 +329,15 @@ body {
 
 .Footer {
   position: absolute;
-  bottom: -94px;
-  left: -343px;
+  top: 0;
+  right: 0;
   width: 100%;
   padding: 10px;
 
   &__Icons {
     display: flex;
     position: absolute;
-    top: -19px;
-    left: 640px;
+    bottom: -776px;
+    right: 16px;
   }
 }
