@@ -76,12 +76,14 @@ const Contact = () => {
     if (validateForm()) {
       console.log("Form submitted successfully:", formData);
 
-      // FIXME:
       const response = await fetch(
         "https://fer-api.coderslab.pl/v1/portfolio/contact",
         {
           method: "POST",
           body: JSON.stringify(formData),
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
       );
 
