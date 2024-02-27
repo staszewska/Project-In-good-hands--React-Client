@@ -10,6 +10,12 @@ const LoginPage = () => {
           Zaloguj się
           <Decoration />
         </div>
+        <form className="LoginPage__Form">
+          <label>Email</label>
+          <input type="email" />
+          <label>Hasło</label>
+          <input type="password"></input>
+        </form>
       </div>
     </>
   );
