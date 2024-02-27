@@ -341,3 +341,21 @@ body {
     right: 16px;
   }
 }
+
+.LoginPageContainer {
+  padding: 30px;
+}
+
+.LoginPage {
+  &__Header {
+    font-size: 1.5em;
+    padding: 30px;
+    color: $main-text-color;
+    font-weight: 300;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
