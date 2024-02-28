@@ -1,6 +1,7 @@
 import { ReactComponent as Decoration } from "../assets/Decoration.svg";
 import React, { useState } from "react";
 import HelpForm from "./HelpForm";
+import ReactPaginate from "react-paginate";
 
 const Help = () => {
   const obj1 = {
