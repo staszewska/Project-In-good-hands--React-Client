@@ -7,45 +7,67 @@ const Help = () => {
   const obj1 = {
     description:
       "W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy.",
-    name1: 'Fundacja "Dbam o zdrowie"',
-    para: "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej",
-    things: "ubrania, jedzenie, meble, zabawki",
-    name2: 'Fundacja "Dla dzieci"',
-    para2: "Cel i misja: Pomoc dzieciom z ubogich rodzin.",
-    things2: "ubrania, meble, zabawki",
-    name3: 'Fundacja "Bez domu"',
-    para3:
-      "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
-    things3: "ubrania, jedzenie, ciepłe koce",
+    items: [
+      {
+        name: 'Fundacja "Dbam o zdrowie"',
+        para: "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej",
+        things: "ub}rania, jedzenie, meble, zabawki",
+      },
+      {
+        name: 'Fundacja "Dla dzieci"',
+        para: "Cel i misja: Pomoc dzieciom z ubogich rodzin.",
+        things: "ubrania, meble, zabawki",
+      },
+      {
+        name: 'Fundacja "Bez domu"',
+        para: "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
+        things: "ubrania, jedzenie, ciepłe koce",
+      },
+    ],
   };
 
   const obj2 = {
     description:
       "Officia excepteur ut velit velit excepteur amet officia occaecat veniam magna eu ad laborum. ",
-    name1: 'Organizacja "Lorem Ipsum1"',
-    para: "Aliquip occaecat do eu qui officia esse magna laboris incididunt. Quis reprehenderit fugiat reprehenderit cillum do pariatur ex.",
-    things: "Sit, officia, pariatur",
-    name2: 'Organizacja "Lorem Ipsum2"',
-    para2: "Esse ullamco ipsum officia esse.",
-    things2: "Sit, adipisicing, mollit",
-    name3: 'Organizacja "Lorem Ipsum3"',
-    para3: "Proident id adipisicing eu qui ut fugiat qui labore.",
-    things3: "Fugiat, esse, cillum",
+    items: [
+      {
+        name: 'Organizacja "Lorem Ipsum1"',
+        para: "Aliquip occaecat do eu qui officia esse magna laboris incididunt. Quis reprehenderit fugiat reprehenderit cillum do pariatur ex.",
+        things: "Sit, officia, pariatur",
+      },
+      {
+        name: 'Organizacja "Lorem Ipsum2"',
+        para: "Esse ullamco ipsum officia esse.",
+        things: "Sit, adipisicing, mollit",
+      },
+      {
+        name: 'Organizacja "Lorem Ipsum3"',
+        para: "Proident id adipisicing eu qui ut fugiat qui labore.",
+        things: "Fugiat, esse, cillum",
+      },
+    ],
   };
 
   const obj3 = {
     description:
       "Mollit et quis enim laboris do elit. Minim fugiat minim esse laboris cupidatat do. Veniam cillum proident magna incididunt voluptate ipsum ad pariatur. Voluptate sunt id ex amet nostrud aliqua ex. Cillum tempor irure fugiat laboris officia adipisicing adipisicing enim ullamco deserunt dolor. Nulla amet reprehenderit voluptate officia incididunt cillum amet sit aute eiusmod proident elit consectetur.",
-    name1: 'Zbiórka "Lorem Ipsum1"',
-    para: "Pariatur exercitation non proident laboris mollit labore.",
-    things: "Fugiat, esse, cillum",
-    name2: 'Zbiórka "Lorem Ipsum2"',
-    para2:
-      "Quis commodo elit consequat labore deserunt nostrud tempor nisi voluptate consequat do.",
-    things2: "Sit, officia, pariatur",
-    name3: 'Zbiórka "Lorem Ipsum3"',
-    para3: "Occaecat laboris proident duis dolor magna culpa officia in ea.",
-    things3: "Sit, officia, pariatur",
+    items: [
+      {
+        name: 'Zbiórka "Lorem Ipsum1"',
+        para: "Pariatur exercitation non proident laboris mollit labore.",
+        things: "Fugiat, esse, cillum",
+      },
+      {
+        name: 'Zbiórka "Lorem Ipsum2"',
+        para: "Quis commodo elit consequat labore deserunt nostrud tempor nisi voluptate consequat do.",
+        things: "Sit, officia, pariatur",
+      },
+      {
+        name: 'Zbiórka "Lorem Ipsum3"',
+        para: "Occaecat laboris proident duis dolor magna culpa officia in ea.",
+        things: "Sit, officia, pariatur",
+      },
+    ],
   };
 
   const [selectedObj, setSelectedObj] = useState(obj1);
