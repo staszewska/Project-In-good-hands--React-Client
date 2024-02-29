@@ -1,7 +1,6 @@
 import { ReactComponent as Decoration } from "../assets/Decoration.svg";
 import React, { useState } from "react";
 import HelpForm from "./HelpForm";
-import ReactPaginate from "react-paginate";
 
 const Help = () => {
   const obj1 = {
@@ -9,17 +8,56 @@ const Help = () => {
       "W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy.",
     items: [
       {
-        name: 'Fundacja "Dbam o zdrowie"',
+        id: 1,
+        name: '1. Fundacja "Dbam o zdrowie"',
         para: "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej",
         things: "ub}rania, jedzenie, meble, zabawki",
       },
       {
-        name: 'Fundacja "Dla dzieci"',
+        id: 2,
+        name: '2. Fundacja "Dla dzieci"',
         para: "Cel i misja: Pomoc dzieciom z ubogich rodzin.",
         things: "ubrania, meble, zabawki",
       },
       {
-        name: 'Fundacja "Bez domu"',
+        id: 3,
+        name: '3. Fundacja "Bez domu"',
+        para: "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
+        things: "ubrania, jedzenie, ciepłe koce",
+      },
+      {
+        id: 4,
+        name: '4. Fundacja "Dla dzieci"',
+        para: "Cel i misja: Pomoc dzieciom z ubogich rodzin.",
+        things: "ubrania, meble, zabawki",
+      },
+      {
+        id: 5,
+        name: '5. Fundacja "Bez domu"',
+        para: "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
+        things: "ubrania, jedzenie, ciepłe koce",
+      },
+      {
+        id: 6,
+        name: '6. Fundacja "Dla dzieci"',
+        para: "Cel i misja: Pomoc dzieciom z ubogich rodzin.",
+        things: "ubrania, meble, zabawki",
+      },
+      {
+        id: 7,
+        name: '7. Fundacja "Bez domu"',
+        para: "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
+        things: "ubrania, jedzenie, ciepłe koce",
+      },
+      {
+        id: 8,
+        name: '8. Fundacja "Dla dzieci"',
+        para: "Cel i misja: Pomoc dzieciom z ubogich rodzin.",
+        things: "ubrania, meble, zabawki",
+      },
+      {
+        id: 9,
+        name: '9. Fundacja "Bez domu"',
         para: "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
         things: "ubrania, jedzenie, ciepłe koce",
       },
@@ -31,17 +69,38 @@ const Help = () => {
       "Officia excepteur ut velit velit excepteur amet officia occaecat veniam magna eu ad laborum. ",
     items: [
       {
-        name: 'Organizacja "Lorem Ipsum1"',
+        id: 1,
+        name: '1. Organizacja "Lorem Ipsum1"',
         para: "Aliquip occaecat do eu qui officia esse magna laboris incididunt. Quis reprehenderit fugiat reprehenderit cillum do pariatur ex.",
         things: "Sit, officia, pariatur",
       },
       {
-        name: 'Organizacja "Lorem Ipsum2"',
+        id: 2,
+        name: '2. Organizacja "Lorem Ipsum2"',
         para: "Esse ullamco ipsum officia esse.",
         things: "Sit, adipisicing, mollit",
       },
       {
-        name: 'Organizacja "Lorem Ipsum3"',
+        id: 3,
+        name: '3. Organizacja "Lorem Ipsum3"',
+        para: "Proident id adipisicing eu qui ut fugiat qui labore.",
+        things: "Fugiat, esse, cillum",
+      },
+      {
+        id: 4,
+        name: '4. Organizacja "Lorem Ipsum1"',
+        para: "Aliquip occaecat do eu qui officia esse magna laboris incididunt. Quis reprehenderit fugiat reprehenderit cillum do pariatur ex.",
+        things: "Sit, officia, pariatur",
+      },
+      {
+        id: 5,
+        name: '5. Organizacja "Lorem Ipsum2"',
+        para: "Esse ullamco ipsum officia esse.",
+        things: "Sit, adipisicing, mollit",
+      },
+      {
+        id: 6,
+        name: '6. Organizacja "Lorem Ipsum3"',
         para: "Proident id adipisicing eu qui ut fugiat qui labore.",
         things: "Fugiat, esse, cillum",
       },
@@ -53,17 +112,20 @@ const Help = () => {
       "Mollit et quis enim laboris do elit. Minim fugiat minim esse laboris cupidatat do. Veniam cillum proident magna incididunt voluptate ipsum ad pariatur. Voluptate sunt id ex amet nostrud aliqua ex. Cillum tempor irure fugiat laboris officia adipisicing adipisicing enim ullamco deserunt dolor. Nulla amet reprehenderit voluptate officia incididunt cillum amet sit aute eiusmod proident elit consectetur.",
     items: [
       {
-        name: 'Zbiórka "Lorem Ipsum1"',
+        id: 1,
+        name: '1. Zbiórka "Lorem Ipsum1"',
         para: "Pariatur exercitation non proident laboris mollit labore.",
         things: "Fugiat, esse, cillum",
       },
       {
-        name: 'Zbiórka "Lorem Ipsum2"',
+        id: 2,
+        name: '2. Zbiórka "Lorem Ipsum2"',
         para: "Quis commodo elit consequat labore deserunt nostrud tempor nisi voluptate consequat do.",
         things: "Sit, officia, pariatur",
       },
       {
-        name: 'Zbiórka "Lorem Ipsum3"',
+        id: 3,
+        name: '3. Zbiórka "Lorem Ipsum3"',
         para: "Occaecat laboris proident duis dolor magna culpa officia in ea.",
         things: "Sit, officia, pariatur",
       },
@@ -100,6 +162,7 @@ const Help = () => {
           Lokalnym zbiórkom
         </button>
       </div>
+
       <div>{selectedObj && <HelpForm data={selectedObj} />}</div>
     </div>
   );

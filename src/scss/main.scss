@@ -232,6 +232,23 @@ body {
   }
 }
 
+.Pagination {
+  &__Container {
+    display: flex;
+    justify-content: center;
+    // padding: 1rem;
+    cursor: pointer;
+  }
+
+  &__Page {
+    // padding: 1rem;
+  }
+
+  &__Page--active {
+    border: 1px solid black;
+  }
+}
+
 .HelpForm__TextContainer p:last-child {
   font-size: 10px;
 }
