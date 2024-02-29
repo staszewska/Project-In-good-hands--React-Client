@@ -185,8 +185,12 @@ body {
     border: none;
     font-size: 1em;
     background: white;
-    padding: 30px;
+    padding: 20px;
     font-family: $font-base;
+  }
+
+  .HelpForm__Button:hover {
+    border: 1px solid lightgray;
   }
 }
 
