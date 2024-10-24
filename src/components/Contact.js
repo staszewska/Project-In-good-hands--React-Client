@@ -103,23 +103,23 @@ const Contact = () => {
           alt="background"
         />
         <div className="Contact__Form">
-          <p>Skontaktuj się z nami</p>
+          <p>Contact us</p>
           <Decoration />
           <form className="Contact__FormContent" onSubmit={handleSubmit}>
             <div className="Contact__FormInput">
               <div className="FormInput__Row">
-                <label htmlFor="name">Wpisz swoje imię</label>
+                <label htmlFor="name">Your name</label>
                 <input
                   type="text"
                   id="name"
                   value={formData.name}
                   onChange={handleNameChange}
-                  placeholder="Krzysztof"
+                  placeholder="Emily"
                 ></input>
                 {errors.name && <p>{errors.name}</p>}
               </div>
               <div className="FormInput__Row">
-                <label htmlFor="email">Wpisz swój e-mail</label>
+                <label htmlFor="email">Your e-mail</label>
                 <input
                   type="text"
                   id="email"
@@ -131,7 +131,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="Contact__FormTextarea">
-              <label htmlFor="message">Wpisz swoją wiadomość</label>
+              <label htmlFor="message">Message</label>
               <textarea
                 id="message"
                 value={formData.message}
@@ -142,7 +142,7 @@ const Contact = () => {
             </div>
             <div className="Contact__SendButtoContainer">
               <button type="submit" className="Contact__SendButton">
-                WYŚLIJ
+                SEND
               </button>
             </div>
           </form>
