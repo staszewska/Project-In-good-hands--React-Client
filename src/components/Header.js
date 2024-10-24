@@ -9,15 +9,15 @@ const Header = () => {
         <img src={heroImage} alt="Hero" style={{ width: "700px" }}></img>
       </div>
       <div className="LeftHeader">
-        <p>Zacznij pomagać!</p>
-        <p>Oddaj niechciane rzeczy w zaufane ręce</p>
+        <p>Start helping!</p>
+        <p>Donate unwanted items to trusted hands</p>
         <Decoration />
         <div className="Header__Links">
           <Link to="login" className="MainButton">
-            ODDAJ RZECZY
+            DONATE ITEMS
           </Link>
           <Link to="login" className="MainButton">
-            ZORGANIZUJ ZBIÓRKĘ
+            ORGANIZE A COLLECTION
           </Link>
         </div>
       </div>
