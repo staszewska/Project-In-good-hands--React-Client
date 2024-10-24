@@ -5,22 +5,22 @@ const NavBar = () => {
   return (
     <nav className="navbar">
       <div className="login">
-        <Link to="login">Zaloguj sie</Link>
-        <Link to="register">Zarejestruj sie</Link>
+        <Link to="login">Log in</Link>
+        <Link to="register">Register</Link>
       </div>
       <div className="links">
-        <Link to="/">Start</Link>
+        <Link to="/">Home</Link>
         <ReactScrollLink to="o-co-chodzi" smooth={true} duration={500}>
-          O co chodzi?
+          What is it about?
         </ReactScrollLink>
         <ReactScrollLink to="us" smooth={true} duration={500}>
-          O nas
+          About Us
         </ReactScrollLink>
         <ReactScrollLink to="help" smooth={true} duration={500}>
-          Fundacja i organizacja
+          Foundation and Organization
         </ReactScrollLink>
         <ReactScrollLink to="contact" smooth={true} duration={500}>
-          Kontakt
+          Contact
         </ReactScrollLink>
       </div>
     </nav>
