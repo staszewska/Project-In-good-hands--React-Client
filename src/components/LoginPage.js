@@ -22,14 +22,10 @@ const LoginPage = () => {
       <NavBar />
       <div className="LoginPageContainer">
         <div className="LoginPage__Header">
-          Zaloguj się
+          Log in
           <Decoration />
         </div>
-        <form
-          className="LoginPage__Form"
-          // onSubmit={handleSubmit(onSubmit)}
-          noValidate
-        >
+        <form className="LoginPage__Form" noValidate>
           <label htmlFor="email">Email</label>
           <input
             id="email"
@@ -43,7 +39,7 @@ const LoginPage = () => {
             })}
           />
           <p className="error">{errors.email?.message}</p>
-          <label htmlFor="password">Hasło</label>
+          <label htmlFor="password">Password</label>
           <input
             id="password"
             type="password"
@@ -53,17 +49,15 @@ const LoginPage = () => {
                 value: 6,
                 message: "Password must be at least 6 characters long",
               },
-              // value: true,
             })}
           />
           <p className="error">{errors.password?.message}</p>
-          {/* <button>Submit</button> */}
         </form>
 
         <div className="LoginPage__Buttons">
-          <Link to="register">Załóż konto</Link>
-          <a src="#" onClick={handleLoginLinkClick}>
-            Zaloguj
+          <Link to="register">Create an account</Link>
+          <a href="#" onClick={handleLoginLinkClick}>
+            Log in
           </a>
         </div>
       </div>
