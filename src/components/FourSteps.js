@@ -9,7 +9,7 @@ const FourSteps = () => {
   return (
     <>
       <div className="FourStepsContainer__Header">
-        <p>Wystarczą 4 proste kroki</p>
+        <p>Just 4 simple steps</p>
         <Decoration />
       </div>
 
@@ -20,8 +20,8 @@ const FourSteps = () => {
             alt="Icon-1"
             style={{ width: "30px", height: "30px" }}
           />
-          <p>Wybierz rzeczy</p>
-          <p>ubrania, zabawki, sprzęt i inne</p>
+          <p>Choose items</p>
+          <p>clothes, toys, equipment, and more</p>
         </div>
 
         <div className="FourStepsConatiner__Column">
@@ -30,8 +30,8 @@ const FourSteps = () => {
             alt="Icon-2"
             style={{ width: "30px", height: "30px" }}
           />
-          <p>Spakuj je</p>
-          <p>skorzystaj z worków na śmieci</p>
+          <p>Pack them</p>
+          <p>use trash bags</p>
         </div>
 
         <div className="FourStepsConatiner__Column">
@@ -40,8 +40,8 @@ const FourSteps = () => {
             alt="Icon-3"
             style={{ width: "30px", height: "30px" }}
           />
-          <p>Zdecyduj komu chcesz pomóc</p>
-          <p>wybierz zaufane miejsce</p>
+          <p>Decide who you want to help</p>
+          <p>choose a trusted place</p>
         </div>
 
         <div className="FourStepsConatiner__Column">
@@ -50,14 +50,14 @@ const FourSteps = () => {
             alt="Icon-4"
             style={{ width: "30px", height: "30px" }}
           />
-          <p>Zamów kuriera</p>
-          <p>kurier przyjedzie w dogodnym terminie</p>
+          <p>Order a courier</p>
+          <p>the courier will arrive at a convenient time</p>
         </div>
       </div>
 
       <div className="FourStepsContainer__Button">
         <Link to="login" className="MainButton">
-          ODDAJ RZECZY
+          DONATE ITEMS
         </Link>
       </div>
     </>
