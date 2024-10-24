@@ -119,7 +119,7 @@ const Contact = () => {
                 {errors.name && <p>{errors.name}</p>}
               </div>
               <div className="FormInput__Row">
-                <label htmlFor="email">Your e-mail</label>
+                <label htmlFor="email">Your E-mail</label>
                 <input
                   type="text"
                   id="email"
