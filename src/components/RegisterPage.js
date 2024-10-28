@@ -79,7 +79,7 @@ const RegisterPage = () => {
           </a>
         </div>
       </div>
-      {/* <DevTool control={control} /> */}
+      <DevTool control={control} />
     </>
   );
 };
