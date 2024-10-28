@@ -60,7 +60,7 @@ const RegisterPage = () => {
 
         <div className="RegisterPage__Buttons">
           <Link to="login">Already have an account? Log in</Link>
-          <button type="submit">Register</button>
+          <a href="#">Register</a>
         </div>
       </div>
       {/* <DevTool control={control} /> */}
