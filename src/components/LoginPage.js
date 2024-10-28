@@ -1,8 +1,8 @@
 import NavBar from "./NavBar";
-import { ReactComponent as Decoration } from "../assets/Decoration.svg";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
+import Decoration from "../assets/Decoration.svg";
 
 const LoginPage = () => {
   const form = useForm();
@@ -23,7 +23,7 @@ const LoginPage = () => {
       <div className="LoginPageContainer">
         <div className="LoginPage__Header">
           Log in
-          <Decoration />
+          <img src={Decoration} alt="Decoration" />
         </div>
         <form className="LoginPage__Form" noValidate>
           <label htmlFor="email">Email</label>
