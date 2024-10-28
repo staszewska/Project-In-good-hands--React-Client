@@ -6,7 +6,21 @@ import { DevTool } from "@hookform/devtools";
 
 const RegisterPage = () => {
   const form = useForm();
-  const { register, control, watch, handleSubmit, formState } = form;
+  const {
+    register,
+    control,
+    watch,
+    handleSubmit,
+    formState: { errors },
+  } = form;
+
+  const onSubmit = (data) => {
+    console.log("Form submitted", data);
+  };
+
+  const handleRegisterClick = () => {
+    form.handleSubmit(onSubmit)();
+  };
 
   return (
     <>
@@ -29,7 +43,7 @@ const RegisterPage = () => {
               },
             })}
           />
-          {/* <p className="error">{errors.email?.message}</p> */}
+          <p className="error">{errors.email?.message}</p>
 
           <label htmlFor="password">Password</label>
           <input
@@ -43,7 +57,7 @@ const RegisterPage = () => {
               },
             })}
           />
-          {/* <p className="error">{errors.password?.message}</p> */}
+          <p className="error">{errors.password?.message}</p>
 
           <label htmlFor="confirmPassword">Confirm Password</label>
           <input
@@ -55,12 +69,14 @@ const RegisterPage = () => {
                 value === watch("password") || "Passwords do not match",
             })}
           />
-          {/* <p className="error">{errors.confirmPassword?.message}</p> */}
+          <p className="error">{errors.confirmPassword?.message}</p>
         </form>
 
         <div className="RegisterPage__Buttons">
           <Link to="login">Already have an account? Log in</Link>
-          <a href="#">Register</a>
+          <a href="#" onClick={handleRegisterClick}>
+            Register
+          </a>
         </div>
       </div>
       {/* <DevTool control={control} /> */}
