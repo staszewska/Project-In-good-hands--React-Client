@@ -3,8 +3,13 @@ import Decoration from "../assets/Decoration.svg";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
+import { useState } from "react";
 
 const RegisterPage = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  // use Hook-form for form validation
   const form = useForm();
   const {
     register,
@@ -14,12 +19,24 @@ const RegisterPage = () => {
     formState: { errors },
   } = form;
 
+  // onSubmit defines function for the form submission
   const onSubmit = (data) => {
-    console.log("Form submitted", data);
-  };
+    fetch("http://localhost:8000/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        console.log("Check", response);
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+      });
 
-  const handleRegisterClick = () => {
-    form.handleSubmit(onSubmit)();
+    console.log("Email:", email);
+    console.log("Password:", password);
+    // console.log("Confirm password:", confirmPassword);
   };
 
   return (
@@ -30,11 +47,17 @@ const RegisterPage = () => {
           Register
           <img src={Decoration} alt="Decoration" />
         </div>
-        <form className="RegisterPage__Form" noValidate>
+        <form
+          className="RegisterPage__Form"
+          noValidate
+          onSubmit={handleSubmit(onSubmit)}
+        >
           <label htmlFor="email">Email</label>
           <input
             id="email"
             type="email"
+            // value={email}
+            onChange={(e) => setEmail(e.target.value)}
             {...register("email", {
               required: "Email is required",
               pattern: {
@@ -49,6 +72,7 @@ const RegisterPage = () => {
           <input
             id="password"
             type="password"
+            onChange={(e) => setPassword(e.target.value)}
             {...register("password", {
               required: "Password is required",
               minLength: {
@@ -70,13 +94,12 @@ const RegisterPage = () => {
             })}
           />
           <p className="error">{errors.confirmPassword?.message}</p>
+
+          <button type="submit">Register</button>
         </form>
 
         <div className="RegisterPage__Buttons">
           <Link to="login">Already have an account? Log in</Link>
-          <a href="#" onClick={handleRegisterClick}>
-            Register
-          </a>
         </div>
       </div>
       <DevTool control={control} />
