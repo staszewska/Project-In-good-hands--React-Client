@@ -101,6 +101,7 @@ const RegisterPage = () => {
             type="password"
             {...register("confirmPassword", {
               required: "Password confirmation is required",
+              // validation - make sure the passwords match
               validate: (value) =>
                 value === watch("password") || "Passwords do not match",
             })}
