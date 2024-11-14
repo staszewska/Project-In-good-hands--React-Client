@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   // use Hook-form for form validation
   const form = useForm();
@@ -20,22 +23,31 @@ const RegisterPage = () => {
   } = form;
 
   // onSubmit defines function for the form submission
-  const onSubmit = (data) => {
+  const onSubmit = (formData) => {
+    const dataToSubmit = {
+      Email: formData.email,
+      Password: formData.password,
+    };
+
     fetch("http://localhost:8000/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+      body: JSON.stringify(dataToSubmit),
     })
       .then((response) => {
         console.log("Check", response);
         return response.json();
       })
       .then((data) => {
+        navigate("/login");
         console.log(data);
+      })
+      .catch((error) => {
+        console.error("Error during form submission:", error);
       });
 
-    console.log("Email:", email);
-    console.log("Password:", password);
+    // console.log("Email:", email);
+    // console.log("Password:", password);
     // console.log("Confirm password:", confirmPassword);
   };
 
