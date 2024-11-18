@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 const RegisterPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const navigate = useNavigate();
 
@@ -35,6 +36,13 @@ const RegisterPage = () => {
       body: JSON.stringify(dataToSubmit),
     })
       .then((response) => {
+        if (!response.ok) {
+          // If status is not okay
+          return response.json().then((data) => {
+            //extract the message from backend
+            throw new Error(data.Message);
+          });
+        }
         console.log("Check", response);
         return response.json();
       })
@@ -43,6 +51,7 @@ const RegisterPage = () => {
         console.log(data);
       })
       .catch((error) => {
+        setErrorMessage(error.message);
         console.error("Error during form submission:", error);
       });
 
@@ -107,6 +116,9 @@ const RegisterPage = () => {
             })}
           />
           <p className="error">{errors.confirmPassword?.message}</p>
+
+          {/* Display server-side error message */}
+          {errorMessage && <p className="error server-error">{errorMessage}</p>}
 
           <button type="submit">Register</button>
         </form>
