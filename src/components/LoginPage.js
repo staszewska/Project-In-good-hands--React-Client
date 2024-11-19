@@ -3,14 +3,55 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import Decoration from "../assets/Decoration.svg";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const LoginPage = () => {
   const form = useForm();
   const { register, control, handleSubmit, formState } = form;
   const { errors } = formState;
+  const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
 
-  const onSubmit = (data) => {
-    console.log("Form submitted", data);
+  // onSubmit defines function for the form submission
+  const onSubmit = (formData) => {
+    const dataToSubmit = {
+      Email: formData.email,
+      Password: formData.password,
+    };
+
+    fetch("http://localhost:8000/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(dataToSubmit),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          // If status is not okay
+          return response.json().then((data) => {
+            //extract the message from backend
+
+            throw new Error(
+              data.message
+              // || "User not found"
+            );
+          });
+        }
+        console.log("Check", response);
+        return response.json();
+      })
+      .then((data) => {
+        navigate("/");
+        console.log(data);
+      })
+      .catch((error) => {
+        setErrorMessage(error.message);
+        console.error("Error during form submission:", error);
+      });
+
+    // console.log("Email:", email);
+    // console.log("Password:", password);
+    // console.log("Confirm password:", confirmPassword);
   };
 
   const handleLoginLinkClick = () => {
@@ -25,11 +66,16 @@ const LoginPage = () => {
           Log in
           <img src={Decoration} alt="Decoration" />
         </div>
-        <form className="LoginPage__Form" noValidate>
+        <form
+          className="LoginPage__Form"
+          noValidate
+          onSubmit={handleSubmit(onSubmit)}
+        >
           <label htmlFor="email">Email</label>
           <input
             id="email"
             type="email"
+            // onChange={(e) => setEmail(e.target.value)}
             {...register("email", {
               required: "E-mail is required",
               pattern: {
@@ -52,6 +98,8 @@ const LoginPage = () => {
             })}
           />
           <p className="error">{errors.password?.message}</p>
+
+          {errorMessage && <p className="error server-error">{errorMessage}</p>}
         </form>
 
         <div className="LoginPage__Buttons">
