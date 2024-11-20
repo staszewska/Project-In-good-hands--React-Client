@@ -6,7 +6,7 @@ import Decoration from "../assets/Decoration.svg";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-const LoginPage = () => {
+const LoginPage = ({ onUserLogIn }) => {
   const form = useForm();
   const { register, control, handleSubmit, formState } = form;
   const { errors } = formState;
@@ -42,7 +42,8 @@ const LoginPage = () => {
       })
       .then((data) => {
         navigate("/");
-        console.log(data);
+        onUserLogIn(data);
+        console.log("LoginPage] Log in successfully:", data);
       })
       .catch((error) => {
         setErrorMessage(error.message);
