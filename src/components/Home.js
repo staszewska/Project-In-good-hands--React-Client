@@ -6,11 +6,27 @@ import { Element } from "react-scroll";
 import AboutUs from "./AboutUs";
 import Help from "./Help";
 import Contact from "./Contact";
+import { useEffect, useState } from "react";
 
-const Home = () => {
+const Home = ({ userData }) => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    if (!userData) {
+      return;
+    }
+
+    console.log("[Home] UserData detected:", userData);
+    setUser(userData.user);
+  }, [userData]);
+
+  function handleUserLogOut() {
+    setUser(null);
+  }
+
   return (
     <div>
-      <NavBar />
+      <NavBar user={user} onUserLogOut={() => handleUserLogOut()} />
 
       <Header />
 
