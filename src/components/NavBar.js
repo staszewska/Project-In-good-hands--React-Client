@@ -1,12 +1,36 @@
 import { Link } from "react-router-dom";
 import { Link as ReactScrollLink } from "react-scroll";
+import { useEffect, useState } from "react";
 
-const NavBar = () => {
+const NavBar = ({ user, onUserLogOut }) => {
+  useEffect(() => {
+    if (!user) {
+      console.log("No user detected");
+      return;
+    }
+
+    console.log("[NavBar] User detected:", user);
+  }, [user]);
+
+  function handleLogOut() {
+    onUserLogOut();
+  }
+
   return (
     <nav className="navbar">
       <div className="login">
-        <Link to="/login">Log in</Link>
-        <Link to="/register">Register</Link>
+        {!user ? (
+          <>
+            <Link to="/login">Log in</Link>
+            <Link to="/register">Register</Link>
+          </>
+        ) : (
+          <>
+            <span>Hello, {user.Email}</span>
+
+            <Link onClick={handleLogOut}>Logout</Link>
+          </>
+        )}
       </div>
       <div className="links">
         <Link to="/">Home</Link>
