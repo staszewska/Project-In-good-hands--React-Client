@@ -41,8 +41,19 @@ const LoginPage = ({ onUserLogIn }) => {
         return response.json();
       })
       .then((data) => {
+        const token = data.token;
+
+        if (token) {
+          // Store token to local storage
+          localStorage.setItem("authToken", token);
+          console.log("Token saved to local storage,");
+        } else {
+          console.log("Token not saved");
+        }
+
         navigate("/");
         onUserLogIn(data);
+
         console.log("LoginPage] Log in successfully:", data);
       })
       .catch((error) => {
