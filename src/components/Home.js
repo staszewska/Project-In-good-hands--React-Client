@@ -12,16 +12,23 @@ const Home = ({ userData }) => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    if (!userData) {
-      return;
+    //if user is provided use it, otherwise, look for user in localStorage
+    if (userData) {
+      console.log("[Home] UserData detected:", userData);
+      setUser(userData.user);
+    } else {
+      const storedUser = JSON.parse(localStorage.getItem("user"));
+      if (storedUser) {
+        console.log("[Home] User restored from localStorage:", storedUser);
+        setUser(storedUser);
+      }
     }
-
-    console.log("[Home] UserData detected:", userData);
-    setUser(userData.user);
   }, [userData]);
 
   function handleUserLogOut() {
     setUser(null);
+    localStorage.removeItem("authToken");
+    localStorage.removeItem("user");
   }
 
   return (
