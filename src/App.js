@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import LoginPage from "./components/LoginPage";
 import AboutUs from "./components/AboutUs";
 import RegisterPage from "./components/RegisterPage";
+import FormFirstPage from "./components/Form/FormFirstPage";
 
 function App() {
   const [userData, setUserData] = useState(null);
@@ -23,10 +24,12 @@ function App() {
           }
         />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/donate" element={<FormFirstPage />} />
+
         {/* <Route path="/us" element={<UsPage />} />
         <Route path="/foundation" element={<FoundationPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/donate" element={<LoginPage />} />
+        
         <Route path="/organize" element={<LoginPage />} /> */}
       </Routes>
     </BrowserRouter>
