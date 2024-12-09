@@ -2,23 +2,29 @@ import { Link } from "react-router-dom";
 import { Link as ReactScrollLink } from "react-scroll";
 import { useEffect, useState } from "react";
 
-const NavBar = ({ user, onUserLogOut }) => {
+const NavBar = ({ onUserLogOut }) => {
+  const [user, setUser] = useState(null);
+
   useEffect(() => {
-    if (!user) {
-      console.log("No user detected");
-      return;
+    const token = localStorage.getItem("authToken");
+    if (token) {
+      const storedUser = JSON.parse(localStorage.getItem("user"));
+      setUser(storedUser);
+    } else {
+      setUser(null);
     }
+  }, []); // This runs when the component mounts
 
-    console.log("[NavBar] User detected:", user);
-  }, [user]);
-
-  function handleLogOut() {
-    onUserLogOut();
-  }
+  const handleLogOut = () => {
+    localStorage.removeItem("authToken");
+    localStorage.removeItem("user");
+    setUser(null);
+  };
 
   return (
     <nav className="navbar">
       <div className="login">
+        s
         {!user ? (
           <>
             <Link to="/login">Log in</Link>
