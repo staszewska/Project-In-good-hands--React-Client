@@ -1,8 +1,21 @@
 import { ReactComponent as Decoration } from "../assets/Decoration.svg";
 import heroImage from "../assets/Home-Hero-Image.jpg";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  function handleDonate() {
+    const token = localStorage.getItem("authToken");
+
+    if (token) {
+      navigate("/donate");
+    } else {
+      navigate("/login");
+    }
+  }
+
   return (
     <div className="header">
       <div className="RightHeader">
@@ -13,9 +26,9 @@ const Header = () => {
         <p>Donate unwanted items to trusted hands</p>
         <Decoration />
         <div className="Header__Links">
-          <Link to="login" className="MainButton">
+          <button onClick={handleDonate} className="MainButton">
             DONATE ITEMS
-          </Link>
+          </button>
           <Link to="login" className="MainButton">
             ORGANIZE A COLLECTION
           </Link>
