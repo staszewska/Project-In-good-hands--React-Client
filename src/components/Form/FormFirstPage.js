@@ -14,7 +14,6 @@ const FormFirstPage = ({ user, handleUserLogOut }) => {
       </div>
       <div>
         <img src={backgroundForm} alt="Hero" style={{ width: "100%" }}></img>
-        <p> hello</p>
       </div>
 
       <p>Select what you want to donate.</p>
