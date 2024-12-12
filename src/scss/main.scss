@@ -510,7 +510,9 @@ body {
 .DonateInfo {
   width: 100%;
   text-align: center;
+  font-size: 20px;
   padding: 40px;
   background-color: #ffd52f;
-  border-top: #3c3c3c;
+  border-top: 5px solid #3c3c3c;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
 }
