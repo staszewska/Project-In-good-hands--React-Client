@@ -8,7 +8,7 @@ const FormFirstPage = ({ user, handleUserLogOut }) => {
     <>
       <NavBar user={user} onUserLogOut={() => handleUserLogOut()} />
 
-      <div className="donateInfo">
+      <div className="DonateInfo">
         <p>Important!</p>
         <p>Fill in the details about the items you want to donate.</p>
       </div>
