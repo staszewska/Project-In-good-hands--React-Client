@@ -24,7 +24,6 @@ const NavBar = ({ onUserLogOut }) => {
   return (
     <nav className="navbar">
       <div className="login">
-        s
         {!user ? (
           <>
             <Link to="/login">Log in</Link>
